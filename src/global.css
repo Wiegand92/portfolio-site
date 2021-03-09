@@ -1,0 +1,96 @@
+html {
+  font-size: 62.5%;
+	margin: 0;
+	min-height: 100vh;
+	min-width: 100vw;
+	padding: 0;
+}
+
+body {
+	background-color: #EFF8F3;
+	box-sizing: border-box;
+	font-family: 'Fauna One', serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 1.6rem;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3{
+	font-family: 'Cinzel', serif;
+}
+
+h2{
+	color: #813F09;
+	margin: 0 0 5rem 0;
+	padding: 0;
+	text-decoration: underline;
+}
+
+a {
+	color: #EFF8F3;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #EFF8F3;
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+section{
+	font-size: 1.6rem;
+	padding: 2rem 4rem;
+}
+
+.container {
+	background-color: #1D5962;
+	border-radius: .2rem;
+	margin: 0 auto;
+	padding: 2rem 4rem;
+	width: 90%;
+}
+
+@media (max-width: 335px) {
+	.container {
+		padding: .75rem .75rem
+	}
+}

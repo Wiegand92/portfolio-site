@@ -36,19 +36,19 @@
   .container__project-container{
     box-sizing: border-box;
     display: flex;
-    justify-content: space-around;
-    align-content: center;
-    overflow: auto;
+    flex-direction: row;
+    overflow: hidden;
     padding: 0 0 0 0;
-  }
-
-  .container__project-container::before, .container__project-container::after{
-    box-sizing: border-box;
+    scroll-snap-type: x mandatory;
+    transition: max-width .5s ease-out; 
   }
 
   .project-card{
-    flex: 1 1 33%;
+    display: block;
+    flex: 1 1 100%;
+    margin: auto;
     padding: 2rem;
+    scroll-snap-align: center;
     text-align: center;
   }
 
@@ -67,12 +67,12 @@
   img{
     border-radius: .5rem;
     box-shadow: .2rem .2rem .2rem #0c2231;
-    max-width: 100%;
   }
 
   .container__project-container::-webkit-scrollbar{
 		background-color: rgba(255, 255, 255, 0);
 		width: 1rem;
+    height: 1rem
 	}
 
 	.container__project-container::-webkit-scrollbar-thumb{
@@ -83,5 +83,29 @@
 	.container__project-container::-webkit-scrollbar-corner {
 		display: none
 	}
+
+  @media (max-width: 1280px) {
+    .container__project-container{
+      overflow: overlay;
+      max-width: 68rem;
+      transition: max-width .5s ease-out;
+    }
+  }
+
+  @media (max-width: 890px) {
+    .container__project-container{
+      max-width: 34rem;
+      min-width: 34rem
+    }
+  }
+
+  @media(max-width: 450px) {
+    .container__project-container{
+      min-width: 95%
+    }
+    img{
+      max-width: 63vw;
+    }
+  }
 
 </style>

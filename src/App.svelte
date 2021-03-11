@@ -35,7 +35,7 @@
 		max-width: 95%;
 		max-height: 85%;
 		margin: 0 2.5vw 1rem 2.5vw;
-		overflow: overlay;
+		overflow: scroll;
 		padding: 1rem;
 		position: fixed;
 		scroll-behavior: smooth;

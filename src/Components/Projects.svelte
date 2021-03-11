@@ -71,7 +71,7 @@
 
   .container__project-container::-webkit-scrollbar{
 		background-color: rgba(255, 255, 255, 0);
-		width: 1rem;
+		width: 0;
     height: 1rem
 	}
 
@@ -86,7 +86,7 @@
 
   @media (max-width: 1280px) {
     .container__project-container{
-      overflow: overlay;
+      overflow: scroll;
       max-width: 68rem;
       transition: max-width .5s ease-out;
     }

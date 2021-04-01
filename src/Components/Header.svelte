@@ -1,5 +1,6 @@
 <section id='header'>
   <a href='#projects' class='link link__projects'>My Projects</a>
+  <a href='/photos/Resume.pdf'>My Resume</a>
   <h1 class='title'>Alex Wiegand</h1>
 </section>
 

@@ -6,7 +6,7 @@
 	import Projects from './Components/Projects'
 </script>
 
-<main>
+<main >
 	<Header />
 	<div id='content'>	
 		<Biography />

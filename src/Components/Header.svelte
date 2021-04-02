@@ -29,16 +29,23 @@
     text-shadow: .1rem .1rem black;
   }
 
-  .link {
+  a{
     color: #EFF8F3;
     flex: 1 1 10%;
     text-align: center;
+    margin-left: .5rem
   }
 
-  @media (max-width: 400px){
+  @media (max-width: 420px){
     h1 {
       font-size: 2.5rem
     }
 	}
+
+  @media(max-width: 320px){
+    h1{
+      font-size: 2rem
+    }
+  }
 
 </style>

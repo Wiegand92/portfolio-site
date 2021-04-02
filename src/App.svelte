@@ -54,11 +54,8 @@
 	#content::-webkit-scrollbar-thumb{
 		background-color: #DA304C;
 		border-radius: .5rem;
+		border: .3rem solid rgba(0, 0, 0, 0);
 		max-width: .4rem;
-	}
-
-	#content::-webkit-scrollbar-corner {
-		display: none
 	}
 
 	@media (max-width: 420px) {

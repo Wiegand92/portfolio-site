@@ -16,15 +16,16 @@
     box-sizing: content-box;
     display: flex;
     flex-direction: row;
+    overflow-y: hidden;
     overflow-x: auto;
     padding: 0 0 0 0;
+    min-width: 320px;
     scroll-snap-type: x mandatory;
-    transition: max-width .5s ease-out; 
+    transition: width .5s ease-out; 
   }
 
   .container__project-container::-webkit-scrollbar{
 		background-color: rgba(255, 255, 255, 0);
-		width: 0;
     height: 1rem
 	}
 
@@ -39,22 +40,7 @@
 
   @media (max-width: 1280px) {
     .container__project-container{
-      overflow: scroll;
-      max-width: 68rem;
       transition: max-width .5s ease-out;
-    }
-  }
-
-  @media (max-width: 890px) {
-    .container__project-container{
-      max-width: 34rem;
-      min-width: 34rem
-    }
-  }
-
-  @media(max-width: 450px) {
-    .container__project-container{
-      min-width: 95%
     }
   }
 

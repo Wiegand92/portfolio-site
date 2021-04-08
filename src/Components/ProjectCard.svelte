@@ -53,34 +53,29 @@ on:mouseleave={handleMouseLeave} >
 
 <style>
   .project-card{
-    flex: 1 1 100%;
-    box-sizing: content-box;
-    margin: auto;
     padding: 2rem;
     scroll-snap-align: center;
-    text-align: center;
     height: 25rem;
+
+    @apply m-auto text-center;
   }
 
   a{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     min-height: 220px;
     min-width: 340px;
     text-decoration: none;
+
+    @apply flex flex-col justify-between;
   }
 
   .description{
-    background-color: #0c2231;
-    box-sizing: border-box;
     border-radius: .5rem;
     box-shadow: .2rem .2rem .2rem #0c2231;
     height: 200px;
     width: 320px;
-    margin: 0 0;
     padding: 1rem 2rem;
-    text-shadow: #000 2px 2px 2px;
+    
+    @apply bg-blue-dark box-border m-0;
   }
 
   .title{

@@ -8,7 +8,7 @@
 
 <main >
 	<Header />
-	<div id='content'>	
+	<div>	
 		<Biography />
 		<Devicons />
 		<Projects />
@@ -18,40 +18,33 @@
 
 <style>
 	main {
-		font-size: 1.6rem;
-		max-width: 100vw;
-		min-width: 100vw;
-		max-height: 100vh;
-		min-height: 100vh;
-		margin: 0;
-		padding: 0;
+		@apply w-full h-full m-0 p-0;
 	}
 
-	#content {
-		background-color: #0c2231;
+	div {
 		border-radius: .2rem;
 		box-shadow: -.2rem .2rem .2rem #F4A15D;
 		box-sizing: content-box;
 		max-width: 95%;
 		max-height: 85%;
 		margin: 0 2.5vw 1rem 2.5vw;
-		overflow: scroll;
 		padding: 1rem;
-		position: fixed;
 		scroll-behavior: smooth;
-		top: 8rem
+		top: 8rem;
+
+		@apply bg-blue-dark fixed overflow-scroll;
 	}
 
-	#content::-webkit-scrollbar{
+	div::-webkit-scrollbar{
 		background-color: rgba(255, 255, 255, 0);
 		width: 1rem;
 	}
 
-	#content::-webkit-scrollbar:horizontal{
+	div::-webkit-scrollbar:horizontal{
 		display: none
 	}
 
-	#content::-webkit-scrollbar-thumb{
+	div::-webkit-scrollbar-thumb{
 		background-color: #DA304C;
 		border-radius: .5rem;
 		border: .3rem solid rgba(0, 0, 0, 0);
@@ -59,13 +52,13 @@
 	}
 
 	@media (max-width: 420px) {
-		#content {
+		div {
 			max-width: 90%
 		}
 	}
 
 	@media (max-width: 335px){
-		#content {
+		div {
 			padding: .1rem
 		}
 	}

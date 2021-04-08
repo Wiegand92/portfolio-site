@@ -6,34 +6,26 @@
 
 <style>
   #header{
-    align-items: center;
-    background-color: #1D5962;
-    border-bottom: .25rem solid #813F09;
-    box-sizing: border-box;
-    display: flex;
-    height: 7.5rem;
-    min-width: 100vw;
-    padding: 0;
-    position: fixed;
-    top: 0;
+    /* Border Styles */
+    @apply border-b-2 border-l-0 border-r-0 border-t-0 border-orange-dark border-solid;
+
+    /* Spacing Styles */
+    @apply bg-blue-light fixed flex h-28 items-center p-0 top-0 w-full;
   }
 
   h1 {
-    color: #0c2231;
     flex: 1 1 80%;
     font-size: 4rem;
-    letter-spacing: .25rem;
-    padding-right: 2vw;
-    text-align: right;
     text-decoration: underline dotted #F4A15D;
     text-shadow: .1rem .1rem black;
+
+    @apply text-blue-dark text-right tracking-wide pr-8;
   }
 
   a{
-    color: #EFF8F3;
     flex: 1 1 10%;
-    text-align: center;
-    margin-left: .5rem
+
+    @apply text-white text-center ml-2;
   }
 
   @media (max-width: 420px){

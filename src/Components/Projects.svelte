@@ -14,15 +14,15 @@
 <style>
   .container__project-container{
     box-sizing: content-box;
-    display: flex;
-    flex-direction: row;
-    overflow-y: hidden;
-    overflow-x: auto;
-    padding: 0 0 0 0;
     min-width: 320px;
     scroll-snap-type: x mandatory;
     transition: width .5s ease-out; 
+
+    @apply overflow-y-hidden overflow-x-auto;
+    @apply flex p-0;
   }
+
+
 
   .container__project-container::-webkit-scrollbar{
 		background-color: rgba(255, 255, 255, 0);

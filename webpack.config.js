@@ -31,7 +31,15 @@ module.exports = {
 							dev: !prod
 						},
 						emitCss: prod,
-						hotReload: !prod
+						hotReload: !prod,
+						preprocess: require('svelte-preprocess')({
+							postcss: {
+								plugins: [
+									require('autoprefixer')(),
+									require('tailwindcss')()
+								]
+							}
+						})
 					}
 				}
 			},

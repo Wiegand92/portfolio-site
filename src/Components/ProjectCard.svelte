@@ -5,13 +5,25 @@
   export let project
   let hover = false
 
+  const handleMouseEnter = (e) => {
+    const isPhoto = e.target.classList.contains('project-photo')
+    
+    console.log(e.target.tagName)
+    if(isPhoto && hover === false ){
+      hover = true
+    }
+  }
+
+  const handleMouseLeave = (e) => {
+      hover = false
+  }
 </script>
 
-<div class='project-card'>
+<div class='project-card'
+on:mouseover={handleMouseEnter} 
+on:mouseleave={handleMouseLeave} >
   <a href={project.url}>
-    <div
-      on:pointerover={() => {hover=true}} 
-      on:pointerout={() => {hover=false}}  
+    <div 
     >
       {#if hover}
       {#key hover}
@@ -62,7 +74,7 @@
     height: 200px;
     width: 320px;
     padding: 1rem 2rem;
-
+    
     @apply bg-blue-dark box-border m-0;
   }
 

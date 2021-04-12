@@ -5,13 +5,24 @@
   export let project
   let hover = false
 
+  const handleMouseEnter = (e) => {
+    const isPhoto = e.target.classList.contains('project-photo')
+    
+    if(isPhoto && hover === false ){
+      hover = true
+    }
+  }
+  const handleMouseLeave = (e) => {
+      hover = false
+  }
+
 </script>
 
 <div class='project-card'>
   <a href={project.url}>
     <div
-      on:pointerover={() => {hover=true}} 
-      on:pointerout={() => {hover=false}}  
+      on:pointerover={() => {handleMouseEnter}} 
+      on:pointerout={() => {handleMouseLeave}}  
     >
       {#if hover}
       {#key hover}
@@ -76,7 +87,7 @@
   .hover{
     color: #F4A15D
   }
-  
+
   img{
     height: 200px;
     width: 320px;

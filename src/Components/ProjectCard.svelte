@@ -5,25 +5,13 @@
   export let project
   let hover = false
 
-  const handleMouseEnter = (e) => {
-    const isPhoto = e.target.classList.contains('project-photo')
-    
-    console.log(e.target.tagName)
-    if(isPhoto && hover === false ){
-      hover = true
-    }
-  }
-
-  const handleMouseLeave = (e) => {
-      hover = false
-  }
 </script>
 
-<div class='project-card'
-on:mouseover={handleMouseEnter} 
-on:mouseleave={handleMouseLeave} >
+<div class='project-card'>
   <a href={project.url}>
-    <div 
+    <div
+      on:pointerover={() => {hover=true}} 
+      on:pointerout={() => {hover=false}}  
     >
       {#if hover}
       {#key hover}
@@ -39,8 +27,8 @@ on:mouseleave={handleMouseLeave} >
       {#key hover}
       <img 
         in:fade="{{delay:200}}" 
-        class='project-photo' 
         out:fade="{{delay:0, duration:200}}" 
+        class='project-photo' 
         src={project.photo} 
         alt={project.name}
       />
@@ -74,7 +62,7 @@ on:mouseleave={handleMouseLeave} >
     height: 200px;
     width: 320px;
     padding: 1rem 2rem;
-    
+
     @apply bg-blue-dark box-border m-0;
   }
 
@@ -88,6 +76,7 @@ on:mouseleave={handleMouseLeave} >
   .hover{
     color: #F4A15D
   }
+  
   img{
     height: 200px;
     width: 320px;

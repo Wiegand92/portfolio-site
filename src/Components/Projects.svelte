@@ -2,7 +2,7 @@
   import { projects } from '../projects'
   import ProjectCard from './ProjectCard.svelte'
 </script>
-<section id='projects'>
+<section>
   <h2>My Projects</h2>
   <div class="container">
     {#each projects as project (project.name)}
@@ -20,7 +20,7 @@
     @apply overflow-y-hidden overflow-x-auto;
     @apply flex p-0;
   }
-  
+
   div::-webkit-scrollbar{
 		background-color: rgba(255, 255, 255, 0);
     height: 1rem

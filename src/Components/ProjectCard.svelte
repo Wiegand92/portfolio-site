@@ -7,7 +7,6 @@
 
   const handleMouseEnter = (e) => {
     const isPhoto = e.target.classList.contains('project-photo')
-    
     if(isPhoto && hover === false ){
       hover = true
     }
@@ -18,12 +17,12 @@
 
 </script>
 
-<div class='project-card'>
+<div class='project-card'
+  on:pointerover={handleMouseEnter}
+  on:pointerout={handleMouseLeave}
+>
   <a href={project.url}>
-    <div
-      on:pointerover={() => {handleMouseEnter}} 
-      on:pointerout={() => {handleMouseLeave}}  
-    >
+    <div>
       {#if hover}
       {#key hover}
       <p 

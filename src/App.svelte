@@ -7,8 +7,10 @@
 </script>
 
 <main >
-	<Header />
-	<div>	
+	<div class="header">
+		<Header />
+	</div>
+	<div class="body">	
 		<Biography />
 		<Devicons />
 		<Projects />
@@ -18,21 +20,24 @@
 
 <style>
 	main {
-		@apply w-full h-full m-0 p-0;
+		@apply m-0 p-0;
+	}
+	.header{
+		@apply p-0 m-0;
 	}
 
-	div {
+	.body {
 		border-radius: .2rem;
 		box-shadow: -.2rem .2rem .2rem #F4A15D;
 		box-sizing: content-box;
-		max-width: 95%;
-		max-height: 85%;
-		margin: 0 2.5vw 1rem 2.5vw;
 		padding: 1rem;
 		scroll-behavior: smooth;
 		top: 8rem;
+		left: 2.5vw;
 
-		@apply bg-blue-dark fixed overflow-scroll;
+		max-height: 86vh;
+		max-width: 95vw;
+		@apply bg-blue-dark p-0 m-0 fixed overflow-scroll;
 	}
 
 	div::-webkit-scrollbar{
@@ -49,17 +54,5 @@
 		border-radius: .5rem;
 		border: .3rem solid rgba(0, 0, 0, 0);
 		max-width: .4rem;
-	}
-
-	@media (max-width: 420px) {
-		div {
-			max-width: 90%
-		}
-	}
-
-	@media (max-width: 335px){
-		div {
-			padding: .1rem
-		}
 	}
 </style>

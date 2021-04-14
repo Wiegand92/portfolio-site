@@ -50,27 +50,33 @@
 </div>
 
 <style>
-  .project-card{
-    padding: 2rem;
-    scroll-snap-align: center;
-    height: 25rem;
 
-    @apply m-auto text-center;
+  .project-card{
+    scroll-snap-align: center center;
+
+    @apply mx-photoX text-center h-full w-full;
   }
 
   a{
-    min-height: 220px;
-    min-width: 340px;
     text-decoration: none;
 
     @apply flex flex-col justify-between;
   }
 
+  a, .description{
+    @apply h-photo w-photo;
+    
+  }
+
+  @screen portrait {
+    a, .description{
+     @apply h-photoContainerPortrait w-photoContainerPortrait;
+    }
+  }
+
   .description{
     border-radius: .5rem;
     box-shadow: .2rem .2rem .2rem #0c2231;
-    height: 200px;
-    width: 320px;
     padding: 1rem 2rem;
 
     @apply bg-blue-dark box-border m-0;
@@ -88,16 +94,8 @@
   }
 
   img{
-    height: 200px;
-    width: 320px;
     box-sizing: border-box;
     border-radius: .5rem;
     box-shadow: .2rem .2rem .2rem #0c2231;
-  }
-
-  @media(max-width: 450px) {
-    img{
-      max-width: 63vw;
-    }
   }
 </style>

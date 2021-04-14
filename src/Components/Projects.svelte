@@ -8,17 +8,21 @@
     {#each projects as project (project.name)}
       <ProjectCard project={project} />
     {/each}
+    <div class="padding"></div>
   </div>
 </section>
 
 <style>
   div{
-    min-width: 320px;
     scroll-snap-type: x mandatory;
-    transition: width .5s ease-out; 
-
     @apply overflow-y-hidden overflow-x-auto;
-    @apply flex p-0;
+    @apply flex mx-auto shadow-inner h-photoContainer w-photoContianer;
+  }
+
+  @screen portrait {
+    div{
+     @apply h-photoContainerPortrait w-photoContainerPortrait;
+    }
   }
 
   div::-webkit-scrollbar{
@@ -31,10 +35,9 @@
 		border-radius: .5rem;
 	}
 
-  @media (max-width: 1280px) {
-    div{
-      transition: max-width .5s ease-out;
-    }
+  .padding{
+    min-width: 1px
   }
+
 
 </style>

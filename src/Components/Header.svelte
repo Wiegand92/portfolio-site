@@ -28,7 +28,7 @@
     @apply text-white text-center ml-2;
   }
 
-  @media (max-width: 420px){
+  @media (max-width: 470px){
     h1 {
       font-size: 2.5rem
     }

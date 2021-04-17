@@ -54,24 +54,13 @@
   .project-card{
     scroll-snap-align: center center;
 
-    @apply mx-photoX text-center h-full w-full;
+    @apply text-center h-full w-full;
   }
 
   a{
     text-decoration: none;
 
     @apply flex flex-col justify-between;
-  }
-
-  a, .description{
-    @apply h-photo w-photo;
-    
-  }
-
-  @screen portrait {
-    a, .description{
-     @apply h-photoContainerPortrait w-photoContainerPortrait;
-    }
   }
 
   .description{

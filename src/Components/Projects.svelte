@@ -4,25 +4,29 @@
 </script>
 <section>
   <h2>My Projects</h2>
-  <div class="container">
-    {#each projects as project (project.name)}
-      <ProjectCard project={project} />
-    {/each}
-    <div class="padding"></div>
+
+  <div class='outer-box'>
+    <div class="container">
+      {#each projects as project (project.name)}
+        <ProjectCard project={project} />
+      {/each}
+    </div>
   </div>
 </section>
 
 <style>
-  div{
-    scroll-snap-type: x mandatory;
-    @apply overflow-y-hidden overflow-x-auto;
-    @apply flex mx-auto shadow-inner h-photoContainer w-photoContianer;
+  .outer-box {
+    position: static;
+    max-width: 70%;
+    margin: auto;
   }
 
-  @screen portrait {
-    div{
-     @apply h-photoContainerPortrait w-photoContainerPortrait;
-    }
+  .container{
+    padding-top: calc(125 / 200 * 100%);
+    scroll-snap-type: x mandatory;
+
+    @apply overflow-y-hidden overflow-x-auto;
+    @apply flex h-0 mx-auto shadow-inner;
   }
 
   div::-webkit-scrollbar{
@@ -34,10 +38,5 @@
 		background-color: #DA304C;
 		border-radius: .5rem;
 	}
-
-  .padding{
-    min-width: 1px
-  }
-
 
 </style>

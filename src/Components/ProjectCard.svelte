@@ -1,6 +1,6 @@
 <script>
   
-  import {fade} from 'svelte/transition'
+  import {slide} from 'svelte/transition'
 
   export let project
   let hover = false
@@ -12,7 +12,10 @@
     }
   }
   const handleMouseLeave = (e) => {
+    const isParagraph = e.target.classList.contains('description');
+    if(isParagraph && hover){
       hover = false
+    }
   }
 
 </script>
@@ -26,8 +29,8 @@
       {#if hover}
       {#key hover}
       <div 
-        in:fade="{{delay:200}}" 
-        out:fade="{{delay:0, duration:200}}" 
+        in:slide="{{delay:220}}" 
+        out:slide="{{delay:0, duration:200}}" 
         class='description'
       >
         <p>{project.description}</p>
@@ -36,13 +39,12 @@
       {:else}
       {#key hover}
       <div 
-        in:fade="{{delay:200}}" 
-        out:fade="{{delay:0, duration:200}}" 
+        in:slide="{{delay:220}}" 
+        out:slide="{{delay:0, duration:200}}" 
         class='project-photo'
-        style={`background: url(${project.photo}); background-size: contain`}
+        style={`background: no-repeat url(${project.photo}); background-size: contain`}
         alt={project.name}
       ></div>
-
       {/key}
       {/if}
     </div>
@@ -54,9 +56,10 @@
 
   .project-card{
     scroll-snap-align: center center;
-    min-width: 80%;
+    min-width: 95%;
     @apply text-center w-full px-20 pt-2 mb-2;
   }
+
 
   .project-card:last-of-type{
     @apply pr-32;
@@ -83,7 +86,6 @@
     position: relative;
 
     box-shadow: .2rem .2rem .2rem #0c2231;
-    padding: 1rem 2rem;
     height: 0;
     padding-top: calc(1600 / 2560 * 100%);
     
@@ -91,7 +93,7 @@
   }
 
   .description p{
-    @apply absolute top-0 left-0;
+    @apply absolute top-0 left-0 px-5;
   }
 
   .title{

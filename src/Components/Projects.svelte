@@ -7,11 +7,9 @@
 
   <div class='outer-box'>
     <div class="container">
-      <div class="inner">
         {#each projects as project (project.name)}
           <ProjectCard project={project} />
         {/each}
-      </div>
     </div>
   </div>
 </section>
@@ -19,21 +17,30 @@
 <style>
   .outer-box {
     position: static;
-    max-width: 50%;
+    max-width: 60%;
     margin: auto;
   }
 
   .container{
-    padding-top: calc(1600 / 2560 * 100%);
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    max-height: fit-content;
 
-    @apply overflow-y-hidden overflow-x-auto;
-    @apply h-0 relative;
+    @apply relative flex overflow-y-hidden overflow-x-auto;
   }
 
-  .inner{
-    @apply flex absolute w-full top-0 left-0 px-20;
+  .container::before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+    padding-top: calc(1600 / 2560 * 105%);
+  }
+  .container::after { /* to clear float */
+    content: "";
+    display: table;
+    clear: both;
   }
 
   div::-webkit-scrollbar{

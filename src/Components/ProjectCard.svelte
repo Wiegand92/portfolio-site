@@ -35,13 +35,14 @@
       {/key}
       {:else}
       {#key hover}
-      <img 
+      <div 
         in:fade="{{delay:200}}" 
         out:fade="{{delay:0, duration:200}}" 
         class='project-photo' 
         src={project.photo} 
         alt={project.name}
-      />
+      ></div>
+
       {/key}
       {/if}
     </div>
@@ -54,20 +55,28 @@
   .project-card{
     scroll-snap-align: center center;
 
-    @apply text-center h-full w-full;
+    @apply text-center min-h-full min-w-full;
+  }
+
+  .project-photo{
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .2rem #0c2231;
+    height: 0;
+    padding-top: calc(1600 / 2560 * 100%);
+    background: url(/photos/hang-mouse.png);
   }
 
   a{
     text-decoration: none;
 
-    @apply flex flex-col justify-between;
+    @apply flex flex-col w-full h-full justify-between;
   }
 
   .description{
     border-radius: .5rem;
+
     box-shadow: .2rem .2rem .2rem #0c2231;
     padding: 1rem 2rem;
-
     @apply bg-blue-dark box-border m-0;
   }
 
@@ -82,9 +91,4 @@
     color: #F4A15D
   }
 
-  img{
-    box-sizing: border-box;
-    border-radius: .5rem;
-    box-shadow: .2rem .2rem .2rem #0c2231;
-  }
 </style>

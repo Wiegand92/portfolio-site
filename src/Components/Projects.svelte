@@ -26,13 +26,14 @@
   .container{
     padding-top: calc(1600 / 2560 * 100%);
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 
     @apply overflow-y-hidden overflow-x-auto;
     @apply h-0 relative;
   }
 
   .inner{
-    @apply flex absolute w-full top-0 left-0;
+    @apply flex absolute w-full top-0 left-0 px-20;
   }
 
   div::-webkit-scrollbar{

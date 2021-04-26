@@ -25,21 +25,21 @@
     <div>
       {#if hover}
       {#key hover}
-      <p 
+      <div 
         in:fade="{{delay:200}}" 
         out:fade="{{delay:0, duration:200}}" 
         class='description'
       >
-        {project.description}
-      </p>
+        <p>{project.description}</p>
+      </div>
       {/key}
       {:else}
       {#key hover}
       <div 
         in:fade="{{delay:200}}" 
         out:fade="{{delay:0, duration:200}}" 
-        class='project-photo' 
-        src={project.photo} 
+        class='project-photo'
+        style={`background: url(${project.photo}); background-size: contain`}
         alt={project.name}
       ></div>
 
@@ -54,16 +54,22 @@
 
   .project-card{
     scroll-snap-align: center center;
+    min-width: 80%;
+    @apply text-center w-full px-20 pt-2 mb-2;
+  }
 
-    @apply text-center min-h-full min-w-full;
+  .project-card:last-of-type{
+    @apply pr-32;
   }
 
   .project-photo{
     border-radius: .5rem;
     box-shadow: .2rem .2rem .2rem #0c2231;
     height: 0;
+
+     /* 62.5 Percent */
     padding-top: calc(1600 / 2560 * 100%);
-    background: url(/photos/hang-mouse.png);
+    @apply bg-contain;
   }
 
   a{
@@ -74,10 +80,18 @@
 
   .description{
     border-radius: .5rem;
+    position: relative;
 
     box-shadow: .2rem .2rem .2rem #0c2231;
     padding: 1rem 2rem;
+    height: 0;
+    padding-top: calc(1600 / 2560 * 100%);
+    
     @apply bg-blue-dark box-border m-0;
+  }
+
+  .description p{
+    @apply absolute top-0 left-0;
   }
 
   .title{

@@ -4,21 +4,43 @@
 </script>
 <section>
   <h2>My Projects</h2>
-  <div class="container">
-    {#each projects as project (project.name)}
-      <ProjectCard project={project} />
-    {/each}
+
+  <div class='outer-box'>
+    <div class="container">
+        {#each projects as project (project.name)}
+          <ProjectCard project={project} />
+        {/each}
+    </div>
   </div>
 </section>
 
 <style>
-  div{
-    min-width: 320px;
-    scroll-snap-type: x mandatory;
-    transition: width .5s ease-out; 
+  .outer-box {
+    position: static;
+    max-width: 60%;
+    margin: auto;
+  }
 
-    @apply overflow-y-hidden overflow-x-auto;
-    @apply flex p-0;
+  .container{
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    max-height: fit-content;
+
+    @apply relative flex overflow-y-hidden overflow-x-auto;
+  }
+
+  .container::before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+    padding-top: calc(1600 / 2560 * 105%);
+  }
+  .container::after { /* to clear float */
+    content: "";
+    display: table;
+    clear: both;
   }
 
   div::-webkit-scrollbar{
@@ -30,11 +52,5 @@
 		background-color: #DA304C;
 		border-radius: .5rem;
 	}
-
-  @media (max-width: 1280px) {
-    div{
-      transition: max-width .5s ease-out;
-    }
-  }
 
 </style>

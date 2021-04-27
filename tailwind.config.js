@@ -1,5 +1,10 @@
 module.exports = {
-  purge: [],
+  purge:{
+    enabled: true,
+    content: [
+      './src/Components/**',
+    ]
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
@@ -16,19 +21,6 @@ module.exports = {
       white: "#EFF8F3"
     },
     extend: {
-      
-      // height: {
-      //   photo: "calc(34.5vw / (5/4))",
-      //   photoPortrait: "calc(60vh * (5/4))",
-      //   photoContainer: "calc(42.5vw / (5/4))",
-      //   photoContainerPortrait: "calc(70vh * (5/4))"
-      // },
-      // width: {
-      //   photo: "calc(60vh * (5/4))",
-      //   photoPortrait:  "calc(34.5vw / (5/4))",
-      //   photoContianer: "calc(70vh * (5/4))",
-      //   photoContainerPortrait: "calc(42.5vw / (5/4))"
-      // },
       margin: {
         photoX: "5vw"
       },

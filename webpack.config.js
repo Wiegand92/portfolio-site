@@ -67,6 +67,8 @@ module.exports = {
 	],
 	devtool: prod ? false : 'source-map',
 	devServer: {
-		hot: true
+    contentBase: path.resolve(__dirname, 'public'),
+		hot: true,
+    proxy: {'/' : 'http://localhost:4200'},
 	}
 };

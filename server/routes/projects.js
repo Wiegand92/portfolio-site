@@ -23,7 +23,7 @@ projects.post('/', async (req, res, next) => {
 
   const project = new Project(newPost)
 
-  project.save()
+  await project.save()
   .then(() => res.status(200).send())
   .catch(err => console.error(err));
 });
@@ -39,7 +39,7 @@ projects.post('/:id', async (req, res, next) => {
   const id = req.params.id;
   const updates = {...req.body};
 
-  Project.findByIdAndUpdate(id, updates)
+  await Project.findByIdAndUpdate(id, updates)
   .then(() => res.status(200).send())
   .catch(err => console.error(err));
 
@@ -55,7 +55,7 @@ projects.delete('/:id', async (req, res, next) => {
 
   const id = req.params.id;
 
-  Project.findByIdAndDelete(id)
+  await Project.findByIdAndDelete(id)
   .then(() => res.status(204).send())
   .catch(err => console.error(err))
 

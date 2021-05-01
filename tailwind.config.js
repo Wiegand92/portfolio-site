@@ -20,10 +20,11 @@ module.exports = {
         red: "#DA304C",
         transparent: "transparent",
         white: "#EFF8F3"
+      },
     },
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-}
+    variants: {
+      extend: {},
+    },
+    plugins: []
+  }
+};

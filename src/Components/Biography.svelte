@@ -3,8 +3,6 @@
   <h2>About Me</h2>
   <div class="container container__biography-container">
     <img src='./photos/profile.jpg' alt='Alex Wiegand'/>
-
-    <h3>Biography</h3>
     <p>
       A veteran of the restaurant industry for over 14 years, I have experience working as part of a team in a fast paced, ever changing environment. I also have practical experience in designing, developing, and launching a product. I am seeking to leverage this experience to enter the tech industry.
     <br>
@@ -20,12 +18,13 @@
   }
 
   p{
-    color: #0c2231;
-    background-color:  rgba(255, 255, 255, 0.37);
     border-radius: .2rem;
     line-height: 2.5rem;
+    letter-spacing: 1px;
     margin: 0 0;
     padding: 1rem 2rem;
+    text-shadow: 2px 2px black;
+    @apply text-white;
   }
   
   img {

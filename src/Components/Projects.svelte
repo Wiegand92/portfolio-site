@@ -15,11 +15,17 @@
 </section>
 
 <style>
+
+section{
+    @apply my-44;
+  }
+
   .outer-box {
     position: static;
     margin: auto;
     @apply max-w-md;
     @apply md:max-w-6xl;
+    @apply lg:max-w-7xl;
   }
 
   .container{

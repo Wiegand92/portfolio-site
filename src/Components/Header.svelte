@@ -10,13 +10,13 @@
     @apply border-b-2 border-l-0 border-r-0 border-t-0 border-orange-dark border-solid;
 
     /* Spacing Styles */
-    @apply bg-blue-light fixed flex h-28 items-center p-0 top-0 w-full;
+    @apply bg-blue-light fixed flex h-32 items-center p-0 top-0 w-full;
   }
 
   h1 {
     flex: 1 1 80%;
     font-size: 4rem;
-    text-decoration: underline dotted #F4A15D;
+    text-decoration: underline #F4A15D;
     text-shadow: .1rem .1rem black;
 
     @apply text-blue-dark text-right tracking-wide pr-8;

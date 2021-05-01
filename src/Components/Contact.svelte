@@ -8,6 +8,11 @@
 </section>
 
 <style>
+
+  section{
+    @apply mb-44;
+  }
+
   address{
     display: flex;
     justify-content: space-around;

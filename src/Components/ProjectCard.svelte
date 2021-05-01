@@ -71,7 +71,7 @@
     height: 0;
 
      /* 62.5 Percent */
-    padding-top: calc(1600 / 2560 * 100%);
+    padding-top: calc(656 / 1000 * 100%);
     @apply bg-contain;
   }
 
@@ -87,7 +87,7 @@
 
     box-shadow: .2rem .2rem .2rem #0c2231;
     height: 0;
-    padding-top: calc(1600 / 2560 * 100%);
+    padding-top: calc(656 / 1000 * 100%);
     
     @apply bg-blue-dark box-border m-0;
   }

@@ -4,11 +4,11 @@
   <div class="container container__biography-container">
     <img src='./photos/profile.jpg' alt='Alex Wiegand'/>
 
+    <h3>Biography</h3>
     <p>
-      A veteran of the restaurant industry for over 14 years, I have experience working as part of a team in a fast paced, ever changing environment. I also have practical experience in designing, developing, and launching a product. I am seeking to leverage this experience to enter the tech industry. 
-      <br/>
-      I specialize in Web/UI/UX design with JavaScript frameworks such as React and Svelte, as well as developing full stack applications with the PERN stack.
-
+      A veteran of the restaurant industry for over 14 years, I have experience working as part of a team in a fast paced, ever changing environment. I also have practical experience in designing, developing, and launching a product. I am seeking to leverage this experience to enter the tech industry.
+    <br>
+      I specialize in Web/UI/UX design with JavaScript frameworks such as React and Svelte, as well as developing full stack web applications with the PERN/MERN stacks.
     </p>
   </div>
   

@@ -32,7 +32,7 @@
 		box-sizing: content-box;
 		padding: 1rem;
 		scroll-behavior: smooth;
-		top: 8rem;
+		top: 10rem;
 		left: 2.5vw;
 
 		max-height: 86vh;

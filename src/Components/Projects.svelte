@@ -1,5 +1,5 @@
 <script>
-  import { projects } from '../projects'
+  import { projects } from '../utils/projects'
   import ProjectCard from './ProjectCard.svelte'
 </script>
 <section>
@@ -7,7 +7,7 @@
 
   <div class='outer-box'>
     <div class="container">
-        {#each projects as project (project.name)}
+        {#each $projects as project (project.name)}
           <ProjectCard project={project} />
         {/each}
     </div>
@@ -15,10 +15,17 @@
 </section>
 
 <style>
+
+section{
+    @apply my-44;
+  }
+
   .outer-box {
     position: static;
-    max-width: 60%;
     margin: auto;
+    @apply max-w-md;
+    @apply md:max-w-6xl;
+    @apply lg:max-w-7xl;
   }
 
   .container{
@@ -35,7 +42,7 @@
     margin-left: -1px;
     float: left;
     height: 0;
-    padding-top: calc(1600 / 2560 * 105%);
+    padding-top: calc(656 / 1000 * 105%);
   }
   .container::after { /* to clear float */
     content: "";

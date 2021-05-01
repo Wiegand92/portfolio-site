@@ -1,8 +1,8 @@
 module.exports = {
-  purge: {
+  purge:{
     enabled: true,
     content: [
-      './src/styles/**'
+      './src/Components/**',
     ]
   },
   darkMode: false, // or 'media' or 'class'
@@ -20,7 +20,6 @@ module.exports = {
         red: "#DA304C",
         transparent: "transparent",
         white: "#EFF8F3"
-      }
     },
   },
   variants: {

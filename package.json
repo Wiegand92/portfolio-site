@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "devicon": "^2.11.0",
-    "firebase": "^8.4.3"
+    "firebase": "^8.4.3",
+    "svelte-carousel": "^1.0.6"
   }
 }
